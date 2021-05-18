@@ -1,0 +1,163 @@
+body {
+  background-color: rgb(135, 178, 241);
+  margin: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+  align-content: center;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+}
+.grid-item:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/*********************/
+/* proof tree editor */
+/*********************/
+
+#proof-table {
+  text-align: center;
+  font-family: monospace;
+}
+
+#proof-table td {
+  vertical-align: bottom;
+}
+
+.proof-text {
+  border-radius: 5px;
+  font-family: monospace;
+}
+
+#LaTeX-output {
+  font-family: monospace;
+  border: 1px solid blue;
+}
+
+/* Solid Line*/
+hr.line0 {
+  border: 1px solid black;
+}
+
+/* Dashed Line */
+hr.line1 {
+  border: 1px dashed black;
+}
+
+/* Dotted Line*/
+hr.line2 {
+  border: 0px;
+}
+
+
+.conclusion {
+  display: inline-block;
+}
+
+img {
+  max-width: 50%;
+}
+
+
+
+.tab2 {
+  border: 3px solid black;
+  border-radius: 5px;
+  float: left;
+  overflow: hidden;
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+  background-color: #2196F3;
+}
+
+.tab2 button {
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: inherit;
+  float: left;
+  cursor: pointer;
+}
+
+.tab {
+  border: 3px solid black;
+  border-radius: 5px;
+  float: right;
+  overflow: hidden;
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+  background-color: #2196F3;
+}
+
+.tab button {
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: inherit;
+  float: left;
+  cursor: pointer;
+}
+
+.tab button.active {
+  border: 1px solid blue;
+}
+
+.tabcontent {
+  display: none;
+}
+
+.dropbtn {
+  color: blue;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: auto;
+  border: 3px solid salmon;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content button {
+  font-family: monospace;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: max-content;
+  min-width: max-content;
+  display: block; 
+}
+
+.dropdown-content button:hover {
+  background-color:green;
+}
+
+.show {
+  display:block;
+}
+
+
+#proofStuff {
+  display: none;
+}
+
+#badEmail {
+  display: none;
+}
+
+#otherStuff {
+  display: block;
+}

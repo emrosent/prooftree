@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="../style.css" />
+  <link rel="icon" href="https://media.giphy.com/media/WT9sahN3EJ71EDvUio/giphy.gif" type="image/gif">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ethan Rosenthal">
+  <title>Proof Tree Generator</title>
+</head>
+
+<body onload="onCreate(event)">
+  <h1>
+    Proof Tree Generator - Latex
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'Home')">Generator</button>
+      <button class="tablinks" onclick="openTab(event, 'How To Use')">How To Use</button>
+      <button class="tablinks" onclick="openTab(event, 'Symbols')">Symbols</button>
+    </div>
+  </h1>
+  <div id="Home" class="tabcontent">
+    <p>
+      Don't know how to \(\LaTeX\) proof trees? Too lazy to learn? Look no further!
+    </p>
+    <div align="center">
+      <table id="proof-table"></table>
+    </div>
+    <br>
+    <p>
+      Your \(\LaTeX\) code will appear below:
+      <button id="copy-button" onclick="copy()">Copy!</button>
+    </p>
+    <p align="left" id="LaTeX-output">
+      LaTeX code will appear here
+    </p>
+    <p>
+      And your proof tree will be generated live below!
+    </p>
+    <br>
+    <p align="center" id="LaTeX-live">
+    </p>
+  </div>
+
+  <div id="How To Use" class="tabcontent">
+    <h2>Purpose</h2>
+    <p>
+      This proof tree generator was designed with CMU's 15-317 Constructive
+      Logic in mind. The \(\LaTeX\) files you'll see are 15-317 specific. That being
+      said, everything's pretty general-purpose, so go nuts if you want!
+    </p>
+    <h2>\(\LaTeX\) Files</h2>
+    <p>
+      Here's the style package for doing your 15-317 homework:
+    </p>
+    <p>
+      And here's a template for doing your 15-317 homework:
+    </p>
+    <p>
+      The generator uses bussproofs.sty for generating the proof tree. You
+      can see the documentation
+      <a href="https://www.ctan.org/tex-archive/macros/latex/contrib/bussproofs" target="_blank"
+        rel="noopener noreferrer">
+        here
+      </a>
+    </p>
+    <h2>How To Use This Website</h2>
+    <p>
+      A proof tree component is a conclusion, rule, and a list of premises.
+      Next to each component are three dots - clicking them will produce a dropdown
+      menu where you'll find options for manipulating the structure of the proof
+      tree. Should be pretty straightforward :)
+    </p>
+  </div>
+
+  <div id="Symbols" class="tabcontent">
+    <h2>Symbols</h2>
+    <p>
+      Use these within the proof tree generator! Note that some of these commands
+      only work with the provided stylesheet (see "How To Use")
+    </p>
+    <table align="center" class="test">
+      <tr>
+        <th>
+          <h3>Symbol/Judgement</h3>
+        </th>
+        <th>
+          <h3>Code</h3>
+        </th>
+      </tr>
+      <tr>
+        <th>\(\top\)</th>
+        <th>\ltrue</th>
+      </tr>
+      <tr>
+        <th>\(\bot\)</th>
+        <th>\lfalse</th>
+      </tr>
+      <tr>
+        <th>\(\lor\)</th>
+        <th>\lor</th>
+      </tr>
+      <tr>
+        <th>\(\supset\)</th>
+        <th>\limplies</th>
+      </tr>
+      <tr>
+        <th>\(\neg\)</th>
+        <th>\neg</th>
+      </tr>
+      <tr>
+        <th>\(\Longrightarrow\)</th>
+        <th>\seq</th>
+      </tr>
+      <tr>
+        <th>\(\longrightarrow\)</th>
+        <th>\sq</th>
+      </tr>
+      <tr>
+        <th>\(\ true\)</th>
+        <th>\jtrue</th>
+      </tr>
+      <tr>
+        <th>\(\uparrow\)</th>
+        <th>\up</th>
+      </tr>
+      <tr>
+        <th>\(\downarrow\)</th>
+        <th>\down</th>
+      </tr>
+
+
+    </table>
+  </div>
+
+
+  <script src="script.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+
+</html>
